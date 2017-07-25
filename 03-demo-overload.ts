@@ -1,5 +1,12 @@
 // all your signatures
 
+
+   
+function show(x: "slow" | "fast" );
+/** delay in miliseconds */
+function show(x: number );
+function show(x: Function );
+function show(x: { delay: number, target: HTMLElement});
 function show(x) {
     if (typeof x === "string") {
         // must be duration
@@ -16,6 +23,11 @@ function show(x) {
         throw new Error("Invalid Parameter!");
     }
 }
+
+jQuery.ajax({
+    method: "GET",
+    contentType: ""
+})
 
 show(new Date());
 show("slow");
